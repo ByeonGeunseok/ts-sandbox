@@ -1,3 +1,5 @@
 export function JustUtil() {
-    return ;
+    return (
+        alert('util')
+    )
 }

@@ -3,6 +3,6 @@ type Label = {
   func?: () => void;
 };
 
-export default function ActionButton({ label, func }: Label) {
-  return <button onClick={func}>{label}</button>;
+export default function ActionButton(props:Label) {
+  return <button onClick={props.func}>{props.label}</button>;
 }
