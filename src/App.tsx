@@ -1,16 +1,24 @@
 import './App.css';
-import ActionButton from './components/ActionButton';
-import { JustUtil } from './utils/JustUtil';
+import { Tabs } from '@mui/base/Tabs';
+import { TabsList } from '@mui/base/TabsList';
+import { TabPanel } from '@mui/base/TabPanel';
+import { Tab } from '@mui/base/Tab';
+import { HandleCsv } from './pages/HandleCsv';
+import { HandleJson } from './pages/HandleJson';
 
 function App() {
   return (
     <div className="App">
-          <ActionButton label= 'first' func={() => {
-            JustUtil();
-          }}/>
-          <ActionButton label= 'segundo'/>
-          <ActionButton label= '세번째'/>
-          <ActionButton label= '四番目'/>
+      <Tabs defaultValue={1}>
+        <TabsList>
+          <Tab value={1}>One</Tab>
+          <Tab value={2}>Two</Tab>
+          <Tab value={3}>Three</Tab>
+        </TabsList>
+        <TabPanel value={1}>First page</TabPanel>
+        <TabPanel value={2}>{HandleCsv()}</TabPanel>
+        <TabPanel value={3}>{HandleJson()}</TabPanel>
+      </Tabs>
     </div>
   );
 }

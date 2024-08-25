@@ -1,6 +1,6 @@
 type Label = {
   label: string;
-  func?: () => void;
+  func?: () => any;
 };
 
 export default function ActionButton(props:Label) {
